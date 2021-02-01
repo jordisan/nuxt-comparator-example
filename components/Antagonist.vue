@@ -1,18 +1,18 @@
 <template>
-<article v-if="content">
-    <h1>{{content.title}}</h1>
+  <article v-if="content">
+    <h1>{{ content.title }}</h1>
 
     <nuxt-content :document="content" />
-</article>
+  </article>
 </template>
 
 <script lang="ts">
-import { IContentDocument } from "@nuxt/content/types/content"
+import { IContentDocument } from '@nuxt/content/types/content'
 import {
   Component,
   Prop,
   Vue
-} from "nuxt-property-decorator"
+} from 'nuxt-property-decorator'
 
 /**
  * One of the items to be compared
