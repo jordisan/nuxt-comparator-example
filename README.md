@@ -30,3 +30,4 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - https://nuxtjs.org/docs/2.x/get-started/installation
 - https://blog.logrocket.com/how-to-set-up-and-code-nuxt-js-apps-fully-in-typescript/
 - https://github.com/nuxt-community/nuxt-property-decorator
+- https://content.nuxtjs.org/
