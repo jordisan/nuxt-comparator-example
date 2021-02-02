@@ -1,5 +1,7 @@
 # html-js-comparison
 
+Deployed to https://nuxt-comparer.jordisan.net/
+
 ## Build Setup
 
 ```bash
