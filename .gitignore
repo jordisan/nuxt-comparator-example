@@ -69,7 +69,8 @@ typings/
 .nuxt
 
 # Nuxt generate
-dist
+# disable to deploy into GitHub Pages
+# dist
 
 # vuepress build output
 .vuepress/dist
