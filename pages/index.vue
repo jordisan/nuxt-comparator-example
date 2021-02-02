@@ -3,34 +3,27 @@
     <div>
       <Logo />
       <h1 class="title">
-        html-js-comparison
+        html-js-comparison site
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <AntagonistComparison :antagonist-list="antagonistList" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator'
 
-export default Vue.extend({})
+@Component
+export default class Index extends Vue {
+  async asyncData ({ $content, params }: any): Promise<any> {
+    // read the markdown file
+    const antagonistList = await $content('antagonists', params.slug).fetch()
+    // and return content
+    return {
+      antagonistList
+    }
+  }
+}
 </script>
 
 <style>

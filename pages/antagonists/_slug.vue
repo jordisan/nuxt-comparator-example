@@ -1,5 +1,5 @@
 <template>
-  <Antagonist :content="content" />
+  <Antagonist :antagonist="content" />
 </template>
 
 <script>

@@ -1,8 +1,8 @@
 <template>
-  <article v-if="content">
-    <h1>{{ content.title }}</h1>
+  <article v-if="antagonist">
+    <h1>{{ antagonist.title }}</h1>
 
-    <nuxt-content :document="content" />
+    <nuxt-content :document="antagonist" />
   </article>
 </template>
 
@@ -20,6 +20,6 @@ import {
 @Component
 export default class Antagonist extends Vue {
     @Prop()
-    content!: IContentDocument
+    antagonist!: IContentDocument
 }
 </script>
