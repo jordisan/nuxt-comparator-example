@@ -21,7 +21,7 @@ export default class AntagonistComparison extends AntagonistComparisonBase<Antag
       this.contentList?.forEach((content) => {
         this.antagonistList.push(new Antagonist({ propsData: { content } }))
       })
-      // order antagonists
+      // sort antagonists
       this.antagonistList = this.antagonistList.sort((a1: Antagonist, a2: Antagonist) => a1.order - a2.order)
     }
 }

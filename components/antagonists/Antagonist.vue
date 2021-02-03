@@ -4,8 +4,8 @@ import {
   Component,
   Prop
 } from 'nuxt-property-decorator'
+import ContentDocumentBody from '../ContentDocumentBody.vue'
 import AntagonistBase from './AntagonistBase.vue'
-import ContentDocumentBody from './ContentDocumentBody.vue'
 
 /**
  * Implementation of an Antagonist using a content document as data source
@@ -15,7 +15,6 @@ export default class Antagonist extends AntagonistBase {
     @Prop()
     content!: IContentDocument
 
-    // exclude common properties from antagonist properties to compare
     private static readonly FEATURES_KEY: string = 'features'
 
     private created () {
@@ -25,6 +24,7 @@ export default class Antagonist extends AntagonistBase {
         this.title = this.content.title
         this.slug = this.content.slug
         this.description = this.content.description
+        this.createdAt = this.content.createdAt
 
         // get features (if any)
         this.features = {}

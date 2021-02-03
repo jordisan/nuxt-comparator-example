@@ -1,6 +1,6 @@
 <template>
   <section v-if="antagonistList">
-    <h1>Comparison</h1>
+    <h2>Comparison</h2>
 
     <table class="comparison features">
       <thead>

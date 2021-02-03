@@ -27,21 +27,16 @@
 
 <script lang="ts">
 import {
-  Component,
-  Vue
+  Component
 } from 'nuxt-property-decorator'
+import ContentBase from '../ContentBase.vue'
 
 /**
  * Base class for one of the items to be compared (data source agnostic)
  */
 @Component
-export default class AntagonistBase extends Vue {
+export default class AntagonistBase extends ContentBase {
     public order: number = Number.MAX_SAFE_INTEGER
-    public title: string = ''
-    public description: string = ''
-    public slug: string = ''
-    public body: string = ''
-
     public features: { [name: string] : string; } = {}
 }
 </script>
