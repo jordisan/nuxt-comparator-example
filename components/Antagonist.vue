@@ -15,9 +15,15 @@ export default class Antagonist extends AntagonistBase {
     @Prop()
     content!: IContentDocument
 
+    // exclude common properties from antagonist properties to compare
+    private static readonly FEATURES_KEY: string = 'features'
+
     private created () {
       this.title = this.content?.title
       this.slug = this.content?.slug
+      // get features
+      this.features = {}
+      Object.keys(this.content[Antagonist.FEATURES_KEY]).forEach((key) => { this.features[key] = this.content[Antagonist.FEATURES_KEY][key] })
       // get body using ContentDocumentBody component
       this.body = ContentDocumentBody.getBodyAsHtml(this.content)
     }
