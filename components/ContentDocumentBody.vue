@@ -25,7 +25,7 @@ export default class ContentDocumentBody extends Vue {
       const ContentDocumentBodyClass = Vue.extend(ContentDocumentBody)
       const contentBody = new ContentDocumentBodyClass({ propsData: { content } })
       contentBody.$mount()
-      return contentBody.$el.outerHTML
+      return contentBody.$el?.outerHTML
     }
 }
 </script>

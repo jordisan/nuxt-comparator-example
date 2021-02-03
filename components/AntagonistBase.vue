@@ -18,6 +18,7 @@ import {
 @Component
 export default class AntagonistBase extends Vue {
     public title: string = ''
+    public slug: string = ''
     public body: string = ''
 }
 </script>

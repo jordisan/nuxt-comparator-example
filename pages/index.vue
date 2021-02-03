@@ -5,7 +5,7 @@
       <h1 class="title">
         html-js-comparison site
       </h1>
-      <AntagonistComparison :antagonist-list="antagonistList" />
+      <AntagonistComparison :content-list="contentList" />
     </div>
   </div>
 </template>
@@ -17,10 +17,10 @@ import { Component, Vue } from 'nuxt-property-decorator'
 export default class Index extends Vue {
   async asyncData ({ $content, params }: any): Promise<any> {
     // read the markdown file
-    const antagonistList = await $content('antagonists', params.slug).fetch()
+    const contentList = await $content('antagonists', params.slug).fetch()
     // and return content
     return {
-      antagonistList
+      contentList
     }
   }
 }

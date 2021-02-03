@@ -15,8 +15,9 @@ export default class Antagonist extends AntagonistBase {
     @Prop()
     content!: IContentDocument
 
-    private mounted () {
+    private created () {
       this.title = this.content?.title
+      this.slug = this.content?.slug
       // get body using ContentDocumentBody component
       this.body = ContentDocumentBody.getBodyAsHtml(this.content)
     }

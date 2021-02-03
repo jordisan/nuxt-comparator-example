@@ -1,29 +1,26 @@
-<template>
-  <section v-if="antagonistList">
-    <h1>Comparison</h1>
-
-    <li v-for="antagonist of antagonistList" :key="antagonist.slug">
-      <NuxtLink :to="'antagonists/' + antagonist.slug">
-        <h2>{{ antagonist.title }}</h2>
-      </NuxtLink>
-    </li>
-  </section>
-</template>
-
 <script lang="ts">
 import { IContentDocument } from '@nuxt/content/types/content'
 import {
   Component,
-  Prop,
-  Vue
+  Prop
 } from 'nuxt-property-decorator'
+import AntagonistComparisonBase from './AntagonistComparisonBase.vue'
+import Antagonist from './Antagonist.vue'
 
 /**
- * Comparison of antagonists
+ * Comparison of antagonists with data from .md documents
  */
 @Component
-export default class AntagonistComparison extends Vue {
+export default class AntagonistComparison extends AntagonistComparisonBase<Antagonist> {
     @Prop()
-    antagonistList!: IContentDocument[]
+    contentList!: IContentDocument[]
+
+    private created () {
+      this.antagonistList = []
+      this.contentList?.forEach((content) => {
+        // create antagonists from contents
+        this.antagonistList.push(new Antagonist({ propsData: { content } }))
+      })
+    }
 }
 </script>
