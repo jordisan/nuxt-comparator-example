@@ -2,9 +2,8 @@
   <section v-if="antagonistList">
     <h1>Comparison</h1>
 
-    <table class="comparison">
-      <tbody>
-        <!-- header -->
+    <table class="comparison features">
+      <thead>
         <tr>
           <th />
           <th v-for="antagonist in antagonistList" :key="antagonist.slug">
@@ -12,6 +11,14 @@
               <h3>{{ antagonist.title }}</h3>
             </NuxtLink>
           </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Description</th>
+          <td v-for="antagonist in antagonistList" :key="antagonist.slug">
+            {{ antagonist.description }}
+          </td>
         </tr>
         <!-- features -->
         <tr v-for="featureName in allFeaturesNames" :key="featureName">

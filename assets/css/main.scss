@@ -10,3 +10,22 @@ body {
     Arial,
     sans-serif;
 }
+
+table.features {
+    // both in comparison and in single antagonist
+
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    tbody th {
+        text-align: right;
+    }
+
+    th, td {
+        padding: 3px 5px;
+    }
+
+    td {
+        border: solid 1px #2f495e;
+    }
+}

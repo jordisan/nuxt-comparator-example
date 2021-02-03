@@ -2,6 +2,11 @@
   <article>
     <h1>{{ title }}</h1>
 
+    <p>{{ description }}</p>
+
+    <!-- eslint-disable-next-line vue/no-v-html -->
+    <section class="antagonist-body" v-html="body" />
+
     <section v-if="features" class="antagonist-features">
       <h2>Features</h2>
       <table class="features">
@@ -17,9 +22,6 @@
         </tbody>
       </table>
     </section>
-
-    <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="antagonist-body" v-html="body" />
   </article>
 </template>
 
@@ -35,6 +37,7 @@ import {
 @Component
 export default class AntagonistBase extends Vue {
     public title: string = ''
+    public description: string = ''
     public slug: string = ''
     public body: string = ''
 
