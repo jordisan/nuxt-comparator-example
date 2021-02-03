@@ -19,13 +19,18 @@ export default class Antagonist extends AntagonistBase {
     private static readonly FEATURES_KEY: string = 'features'
 
     private created () {
-      this.title = this.content?.title
-      this.slug = this.content?.slug
-      // get features
-      this.features = {}
-      Object.keys(this.content[Antagonist.FEATURES_KEY]).forEach((key) => { this.features[key] = this.content[Antagonist.FEATURES_KEY][key] })
-      // get body using ContentDocumentBody component
-      this.body = ContentDocumentBody.getBodyAsHtml(this.content)
+      if (this.content) {
+        // get data from content
+        this.title = this.content?.title
+        this.slug = this.content?.slug
+        // get features (if any)
+        this.features = {}
+        if (this.content[Antagonist.FEATURES_KEY]) {
+          Object.keys(this.content[Antagonist.FEATURES_KEY]).forEach((key) => { this.features[key] = this.content[Antagonist.FEATURES_KEY][key] })
+        }
+        // get body using ContentDocumentBody component
+        this.body = ContentDocumentBody.getBodyAsHtml(this.content)
+      }
     }
 }
 </script>
