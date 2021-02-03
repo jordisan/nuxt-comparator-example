@@ -1,5 +1,5 @@
 <template>
-  <section v-if="antagonistList">
+  <section v-if="antagonistList" class="antagonist-comparison">
     <h2>Comparison</h2>
 
     <table class="comparison features">
@@ -10,16 +10,12 @@
             <NuxtLink :to="'antagonists/' + antagonist.slug">
               <h3>{{ antagonist.title }}</h3>
             </NuxtLink>
+            <p>{{ antagonist.description }}</p>
+            <p><img :src="antagonist.imgUrl" :alt="antagonist.alt"></p>
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>Description</th>
-          <td v-for="antagonist in antagonistList" :key="antagonist.slug">
-            {{ antagonist.description }}
-          </td>
-        </tr>
         <!-- features -->
         <tr v-for="featureName in allFeaturesNames" :key="featureName">
           <th>
@@ -59,3 +55,11 @@ export default class AntagonistComparisonBase<TA extends AntagonistBase> extends
     }
 }
 </script>
+
+<style lang="scss">
+.antagonist-comparison {
+  th img {
+    height: 50px;
+  }
+}
+</style>

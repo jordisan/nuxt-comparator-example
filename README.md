@@ -23,9 +23,13 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## To do
 
+- Global settings: title, description, ...
+- Generic + sample site
 - Create components: antagonist (summary y/n), comparison, blog list, blog entry, ...
 - Store needed?
 - Some tests
+- Responsive
+- Remove unnecessary folders/files
 
 ## References
 

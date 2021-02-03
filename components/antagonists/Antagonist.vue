@@ -25,6 +25,8 @@ export default class Antagonist extends AntagonistBase {
         this.slug = this.content.slug
         this.description = this.content.description
         this.createdAt = this.content.createdAt
+        this.img = this.content.img
+        this.alt = this.content.alt
 
         // get features (if any)
         this.features = {}

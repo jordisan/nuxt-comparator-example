@@ -11,8 +11,18 @@ body {
     sans-serif;
 }
 
-a {
+h1, h2, h3, h4, h5, th {
+    // headers
+    color: #35495e;
+}
+
+a, a * {
     color: #00c58e;
+    text-decoration: none;
+
+    &:hover {
+        color: #c58e00;
+    }
 }
 
 table.features {
@@ -30,6 +40,6 @@ table.features {
     }
 
     td {
-        border: solid 1px #2f495e;
+        border: solid 1px #00c58e;
     }
 }

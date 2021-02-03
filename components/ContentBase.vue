@@ -13,6 +13,8 @@ export default class ContentBase extends Vue {
     public description: string = ''
     public slug: string = ''
     public body: string = ''
+    public img: string = ''
+    public alt: string = ''
     public createdAt: Date = new Date()
 }
 </script>
