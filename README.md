@@ -1,6 +1,6 @@
-# html-js-comparison
+# nuxt-comparator
 
-Deployed to https://nuxt-comparer.jordisan.net/
+Deployed to https://nuxt-comparator.jordisan.net/
 
 ## Build Setup
 

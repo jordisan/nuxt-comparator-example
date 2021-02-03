@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        html-js-comparison site
+        nuxt-comparator site
       </h1>
       <AntagonistComparison :content-list="contentList" />
     </div>
