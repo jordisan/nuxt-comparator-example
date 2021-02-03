@@ -21,6 +21,7 @@ export default class Antagonist extends AntagonistBase {
     private created () {
       if (this.content) {
         // get data from content
+        this.order = this.content.order
         this.title = this.content.title
         this.slug = this.content.slug
         this.description = this.content.description

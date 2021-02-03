@@ -36,6 +36,7 @@ import {
  */
 @Component
 export default class AntagonistBase extends Vue {
+    public order: number = Number.MAX_SAFE_INTEGER
     public title: string = ''
     public description: string = ''
     public slug: string = ''

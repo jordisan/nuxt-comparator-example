@@ -16,11 +16,13 @@ export default class AntagonistComparison extends AntagonistComparisonBase<Antag
     contentList!: IContentDocument[]
 
     private created () {
+      // create antagonists from contents
       this.antagonistList = []
       this.contentList?.forEach((content) => {
-        // create antagonists from contents
         this.antagonistList.push(new Antagonist({ propsData: { content } }))
       })
+      // order antagonists
+      this.antagonistList = this.antagonistList.sort((a1: Antagonist, a2: Antagonist) => a1.order - a2.order)
     }
 }
 </script>
