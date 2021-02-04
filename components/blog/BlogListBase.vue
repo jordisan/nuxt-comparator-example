@@ -36,14 +36,19 @@ export default class BlogListBase<TB extends BlogEntryBase> extends Vue {
   margin-top: 3.0em;
   text-align: center;
 
-  li {
-    clear: left;
-    list-style-type: none;
-    margin-top: 2.0em;
+  .blog-entries {
+    margin: 0;
+    padding: 0;
 
-    img {
-      width: 200px;
-      margin: 0 5px 5px 0;
+    li {
+      clear: left;
+      list-style-type: none;
+      margin-top: 2.0em;
+
+      img {
+        width: 200px;
+        margin: 5px;
+      }
     }
   }
 }

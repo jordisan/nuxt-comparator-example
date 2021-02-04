@@ -56,6 +56,8 @@ export default class AntagonistComparisonBase<TA extends AntagonistBase> extends
 
 <style lang="scss">
 .antagonist-comparison {
+  margin-top: 3.0em;
+
   th img {
     height: 50px;
   }

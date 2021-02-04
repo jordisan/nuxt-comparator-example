@@ -1,16 +1,13 @@
 <template>
-  <Antagonist :content="content" />
+  <Antagonist v-if="content" :content="content" />
 </template>
 
-<script>
-export default {
-  async asyncData ({ $content, params }) {
-    // read the markdown file
-    const content = await $content('antagonists', params.slug).fetch()
-    // and return content
-    return {
-      content
-    }
-  }
+<script lang="ts">
+import { Component } from 'nuxt-property-decorator'
+import ContentPageBase from '../ContentPageBase.vue'
+
+@Component
+export default class Slug extends ContentPageBase {
+  PATH: string = 'antagonists'
 }
 </script>

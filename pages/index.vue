@@ -2,9 +2,12 @@
   <section class="home">
     <header class="title-wrapper">
       <Logo />
-      <h1 class="title">
-        nuxt-comparator site
+      <h1 v-if="globalContent" class="title">
+        {{ globalContent.title }}
       </h1>
+      <p v-if="globalContent">
+        {{ globalContent.description }}
+      </p>
     </header>
     <AntagonistComparison :content-list="antagonistContentList" />
     <BlogList :content-list="blogContentList" />
@@ -12,10 +15,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component } from 'nuxt-property-decorator'
+import PageBase from './PageBase.vue'
 
 @Component
-export default class Index extends Vue {
+export default class Index extends PageBase {
   async asyncData ({ $content, params }: any): Promise<any> {
     // read the markdown files
     const antagonistContentList = await $content('antagonists', params.slug).fetch()
