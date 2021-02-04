@@ -18,6 +18,7 @@ import PageBase from '../PageBase.vue'
  */
 @Component
 export default class Index extends PageBase {
+  public pageTitle: string = 'Comparison'
   async asyncData ({ $content, params }: any): Promise<any> {
     // read the markdown files
     const antagonistContentList = await $content('antagonists', params.slug).fetch()

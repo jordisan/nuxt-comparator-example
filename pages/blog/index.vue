@@ -18,6 +18,7 @@ import PageBase from '../PageBase.vue'
  */
 @Component
 export default class Index extends PageBase {
+  public pageTitle: string = 'Blog'
   async asyncData ({ $content, params }: any): Promise<any> {
     // read the markdown files
     const blogContentList = await $content('blog', params.slug).fetch()
