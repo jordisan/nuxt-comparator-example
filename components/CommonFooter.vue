@@ -1,6 +1,6 @@
 <template>
   <footer class="common-footer">
-    About / link
+    Generated with <a href="https://github.com/jordisan/nuxt-comparator/actions" target="_blank">Nuxt comparator</a>
   </footer>
 </template>
 
@@ -8,5 +8,6 @@
 .common-footer {
   margin-top: 5.0rem;
   text-align: center;
+  opacity: .6;
 }
 </style>
