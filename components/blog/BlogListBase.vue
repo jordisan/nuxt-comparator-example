@@ -5,9 +5,10 @@
     <ol v-if="blogEntryList" class="blog blog-entries">
       <li v-for="blogEntry in blogEntryList" :key="blogEntry.slug">
         <NuxtLink :to="'blog/' + blogEntry.slug">
-          <img :src="blogEntry.imgUrl" :alt="blogEntry.alt">
           <h3>{{ blogEntry.title }}</h3>
+          <p><img :src="blogEntry.imgUrl" :alt="blogEntry.alt"></p>
         </NuxtLink>
+        <small>{{ blogEntry.createdAt }}</small>
         <p>{{ blogEntry.description }}</p>
       </li>
     </ol>
@@ -32,14 +33,18 @@ export default class BlogListBase<TB extends BlogEntryBase> extends Vue {
 
 <style lang="scss">
 .blog-entry-list {
+  margin-top: 3.0em;
+  text-align: center;
+
   li {
-    clear: both;
+    clear: left;
     list-style-type: none;
-  }
-  li img {
-    width: 200px;
-    float: left;
-    margin: 0 5px 5px 0;
+    margin-top: 2.0em;
+
+    img {
+      width: 200px;
+      margin: 0 5px 5px 0;
+    }
   }
 }
 </style>
