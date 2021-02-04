@@ -1,7 +1,5 @@
 <template>
   <section v-if="blogEntryList" class="blog-entry-list">
-    <h2>Blog</h2>
-
     <ol v-if="blogEntryList" class="blog blog-entries">
       <li v-for="blogEntry in blogEntryList" :key="blogEntry.slug">
         <NuxtLink :to="'blog/' + blogEntry.slug">

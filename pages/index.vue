@@ -10,6 +10,10 @@
       </p>
     </header>
     <AntagonistComparison :content-list="antagonistContentList" />
+
+    <NuxtLink to="/blog">
+      <h2>Blog</h2>
+    </NuxtLink>
     <BlogList :content-list="blogContentList" />
   </section>
 </template>
