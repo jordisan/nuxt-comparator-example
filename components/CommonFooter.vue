@@ -1,6 +1,6 @@
 <template>
   <footer class="common-footer">
-    Generated with <a href="https://github.com/jordisan/nuxt-comparator/actions" target="_blank">Nuxt comparator</a>
+    Generated with <a href="https://github.com/jordisan/nuxt-comparator/" target="_blank">Nuxt comparator</a>
   </footer>
 </template>
 

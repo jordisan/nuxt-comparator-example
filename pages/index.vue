@@ -12,7 +12,9 @@
     <AntagonistComparison :content-list="antagonistContentList" />
 
     <NuxtLink to="/blog">
-      <h2>Blog</h2>
+      <h2 class="blog-title">
+        Blog
+      </h2>
     </NuxtLink>
     <BlogList :content-list="blogContentList" />
   </section>
@@ -58,14 +60,11 @@ export default class Index extends PageBase {
       color: #35495e;
       letter-spacing: 1px;
     }
+  }
 
-    .subtitle {
-      font-weight: 300;
-      font-size: 42px;
-      color: #526488;
-      word-spacing: 5px;
-      padding-bottom: 15px;
-    }
+  .blog-title {
+    text-align: center;
+    margin-top: 3.0rem;
   }
 
 }

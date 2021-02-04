@@ -27,6 +27,8 @@
 
 <style lang="scss">
 .common-header {
+  padding: 5px 0;
+
   .logo {
     width: 50px;
     float: left;
@@ -35,7 +37,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 2.0em;
-    padding: 1.0em;
+    padding: .5em;
     font-variant: small-caps,
   }
 }
