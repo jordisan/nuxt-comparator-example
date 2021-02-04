@@ -21,8 +21,10 @@ export default class BlogList extends BlogListBase<BlogEntry> {
       this.contentList?.forEach((content) => {
         this.blogEntryList.push(new BlogEntry({ propsData: { content } }))
       })
-      // sort entries
-      this.blogEntryList = this.blogEntryList.sort((b1: BlogEntry, b2: BlogEntry) => Number(b1.createdAt) - Number(b2.createdAt))
+      // sort entries (more recent first)
+      this.blogEntryList = this.blogEntryList.sort(
+        (b1: BlogEntry, b2: BlogEntry) => new Date(b2.createdAt).getTime() - new Date(b1.createdAt).getTime()
+      )
     }
 }
 </script>

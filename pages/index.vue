@@ -22,7 +22,7 @@ import PageBase from './PageBase.vue'
  * Home page
  */
 @Component(
-  { layout: 'Home' }
+  { layout: 'home' }
 )
 export default class Index extends PageBase {
   async asyncData ({ $content, params }: any): Promise<any> {
