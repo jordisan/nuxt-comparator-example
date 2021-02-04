@@ -1,6 +1,5 @@
 <template>
-  <div class="layout layout-default">
-    <CommonHeader />
+  <div class="layout layout-home">
     <main>
       <Nuxt />
     </main>
@@ -10,6 +9,6 @@
 
 <script>
 export default {
-  name: 'Default'
+  name: 'Home'
 }
 </script>

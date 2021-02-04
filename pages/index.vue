@@ -18,7 +18,12 @@
 import { Component } from 'nuxt-property-decorator'
 import PageBase from './PageBase.vue'
 
-@Component
+/**
+ * Home page
+ */
+@Component(
+  { layout: 'Home' }
+)
 export default class Index extends PageBase {
   async asyncData ({ $content, params }: any): Promise<any> {
     // read the markdown files
