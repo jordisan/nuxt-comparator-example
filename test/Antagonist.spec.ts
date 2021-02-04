@@ -11,6 +11,7 @@ describe('Antagonist', () => {
       }
     })
     expect(wrapper.find('h1').exists()).toBeTruthy()
+    // eslint-disable-next-line no-console
     console.log('h1: ' + wrapper.find('h1')?.text())
   })
 })

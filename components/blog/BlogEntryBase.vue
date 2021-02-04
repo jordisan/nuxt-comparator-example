@@ -2,7 +2,7 @@
   <article class="blog-entry">
     <header class="blog-entry-header">
       <h1>{{ title }}</h1>
-      <small>{{ createdAt }}</small>
+      <small>{{ createdAtFormatted }}</small>
 
       <p>{{ description }}</p>
 

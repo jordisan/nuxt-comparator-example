@@ -8,7 +8,7 @@
           <h3>{{ blogEntry.title }}</h3>
           <p><img :src="blogEntry.imgUrl" :alt="blogEntry.alt"></p>
         </NuxtLink>
-        <small>{{ blogEntry.createdAt }}</small>
+        <small>{{ blogEntry.createdAtFormatted }}</small>
         <p>{{ blogEntry.description }}</p>
       </li>
     </ol>
