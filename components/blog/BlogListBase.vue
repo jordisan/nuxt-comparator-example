@@ -4,9 +4,11 @@
       <li v-for="blogEntry in blogEntryList" :key="blogEntry.slug">
         <NuxtLink :to="'blog/' + blogEntry.slug">
           <h3>{{ blogEntry.title }}</h3>
+        </NuxtLink>
+        <time>{{ blogEntry.createdAtFormatted }}</time>
+        <NuxtLink :to="'blog/' + blogEntry.slug">
           <p><img :src="blogEntry.imgUrl" :alt="blogEntry.alt"></p>
         </NuxtLink>
-        <small>{{ blogEntry.createdAtFormatted }}</small>
         <p>{{ blogEntry.description }}</p>
       </li>
     </ol>
@@ -31,7 +33,7 @@ export default class BlogListBase<TB extends BlogEntryBase> extends Vue {
 
 <style lang="scss">
 .blog-entry-list {
-  margin-top: 3.0em;
+  margin-top: 1.0em;
   text-align: center;
 
   .blog-entries {
@@ -41,7 +43,7 @@ export default class BlogListBase<TB extends BlogEntryBase> extends Vue {
     li {
       clear: left;
       list-style-type: none;
-      margin-top: 2.0em;
+      margin-bottom: 2.0em;
 
       img {
         width: 200px;

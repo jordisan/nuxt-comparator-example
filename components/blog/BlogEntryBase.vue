@@ -1,12 +1,13 @@
 <template>
   <article class="blog-entry">
     <header class="blog-entry-header">
+      <p class="blog-entry-img-wrapper">
+        <img :src="imgUrl" :alt="alt">
+      </p>
       <h1>{{ title }}</h1>
-      <small>{{ createdAtFormatted }}</small>
+      <time>{{ createdAtFormatted }}</time>
 
       <p>{{ description }}</p>
-
-      <img :src="imgUrl" :alt="alt">
     </header>
 
     <!-- eslint-disable-next-line vue/no-v-html -->
@@ -34,10 +35,12 @@ export default class BlogEntryBase extends ContentBase {
 <style lang="scss">
 .blog-entry {
   &-header {
-    text-align: center;
+    .blog-entry-img-wrapper {
+      text-align: center;
 
-    img {
-      height: 100px;
+      img {
+        height: 100px;
+      }
     }
   }
 }
