@@ -11,9 +11,13 @@ export default class PageBase extends Vue {
   public pageTitle: string = ''
   public pageDescription: string = ''
 
-  public async created (): Promise<any> {
+  public async getGlobalData () : Promise<void> {
     // read global content
     this.globalContent = await this.$content('global').fetch() as IContentDocument
+  }
+
+  public async fetch (): Promise<any> {
+    await this.getGlobalData()
   }
 
   // set page metadata
