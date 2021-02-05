@@ -5,7 +5,7 @@
       <h1 v-if="globalContent" class="title">
         {{ globalContent.title }}
       </h1>
-      <p v-if="globalContent">
+      <p v-if="globalContent" class="description">
         {{ globalContent.description }}
       </p>
     </header>
@@ -48,17 +48,24 @@ export default class Index extends PageBase {
 .home {
   .logo {
     width: 200px;
+    margin-top: 3.0rem;
   }
 
   .title-wrapper {
     text-align: center;
 
     .title {
+      margin-top: 1.0rem;
+      margin-bottom: 1.0rem;
       display: block;
       font-weight: 300;
       font-size: 70px;
       color: #35495e;
       letter-spacing: 1px;
+    }
+
+    .description {
+      font-size: 22px;
     }
   }
 
