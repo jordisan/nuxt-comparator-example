@@ -4,6 +4,7 @@ description: Description of third item to compare
 img: antagonist3.png
 alt: Antagonist 3
 order: 3
+references: [http://antagonist3.reference/]
 
 features:
     common feature: value3

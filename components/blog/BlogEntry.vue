@@ -24,6 +24,7 @@ export default class BlogEntry extends BlogEntryBase {
         this.createdAt = this.content.createdAt
         this.img = this.content.img
         this.alt = this.content.alt
+        this.references = this.content.references
 
         // get body using ContentDocumentBody component
         this.body = ContentDocumentBody.getBodyAsHtml(this.content)

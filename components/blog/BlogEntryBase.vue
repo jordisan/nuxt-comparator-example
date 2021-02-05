@@ -13,6 +13,17 @@
 
     <!-- eslint-disable-next-line vue/no-v-html -->
     <section class="blog-entry-body" v-html="body" />
+
+    <section v-if="references" class="blog-references">
+      <h2>References</h2>
+      <ul>
+        <li v-for="url in references" :key="url">
+          <a :href="url" target="_blank">
+            {{ url }}
+          </a>
+        </li>
+      </ul>
+    </section>
   </article>
 </template>
 

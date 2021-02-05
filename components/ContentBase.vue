@@ -16,6 +16,7 @@ export default class ContentBase extends Vue {
     public img: string = ''
     public alt: string = ''
     public createdAt: Date = new Date()
+    public references: URL[] = []
 
     get createdAtFormatted (): string {
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }

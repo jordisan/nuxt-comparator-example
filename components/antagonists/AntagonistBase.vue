@@ -28,6 +28,17 @@
         </tbody>
       </table>
     </section>
+
+    <section v-if="references" class="antagonist-references">
+      <h2>References</h2>
+      <ul>
+        <li v-for="url in references" :key="url">
+          <a :href="url" target="_blank">
+            {{ url }}
+          </a>
+        </li>
+      </ul>
+    </section>
   </article>
 </template>
 
