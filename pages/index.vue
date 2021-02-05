@@ -56,7 +56,7 @@ export default class Index extends PageBase {
     .title {
       display: block;
       font-weight: 300;
-      font-size: 80px;
+      font-size: 70px;
       color: #35495e;
       letter-spacing: 1px;
     }

@@ -9,7 +9,9 @@
         <NuxtLink :to="'blog/' + blogEntry.slug">
           <p><img :src="blogEntry.imgUrl" :alt="blogEntry.alt"></p>
         </NuxtLink>
-        <p>{{ blogEntry.description }}</p>
+        <p class="description">
+          {{ blogEntry.description }}
+        </p>
       </li>
     </ol>
   </section>
@@ -43,10 +45,10 @@ export default class BlogListBase<TB extends BlogEntryBase> extends Vue {
     li {
       clear: left;
       list-style-type: none;
-      margin-bottom: 2.0em;
+      margin-bottom: 3.0em;
 
       img {
-        width: 200px;
+        width: 300px;
         margin: 5px;
       }
     }

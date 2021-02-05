@@ -6,8 +6,9 @@
       </p>
       <h1>{{ title }}</h1>
       <time>{{ createdAtFormatted }}</time>
-
-      <p>{{ description }}</p>
+      <p class="description">
+        {{ description }}
+      </p>
     </header>
 
     <!-- eslint-disable-next-line vue/no-v-html -->
@@ -39,7 +40,7 @@ export default class BlogEntryBase extends ContentBase {
       text-align: center;
 
       img {
-        height: 100px;
+        max-height: 200px;
       }
     }
   }

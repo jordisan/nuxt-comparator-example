@@ -15,14 +15,19 @@ body {
 h1, h2, h3, h4, h5, th {
     // headers
     color: #35495e;
-    margin-top: 0.5em;
-    margin-bottom: 0.2em;
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
     font-weight: normal;
 }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.8em; }
 
 p {
-    margin-top: 0.3em;
-    margin-bottom: 0.1em;
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
 }
 
 a, a * {
@@ -37,6 +42,12 @@ a, a * {
 time {
     opacity: .5;
     font-size: 85%;
+}
+
+.description {
+    margin: 1.0em 10%;
+    font-size: 115%;
+    color: #62788e;
 }
 
 table.features {

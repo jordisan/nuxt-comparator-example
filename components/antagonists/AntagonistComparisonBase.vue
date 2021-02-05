@@ -8,7 +8,9 @@
             <NuxtLink :to="'antagonists/' + antagonist.slug">
               <h3>{{ antagonist.title }}</h3>
             </NuxtLink>
-            <p>{{ antagonist.description }}</p>
+            <p class="description">
+              {{ antagonist.description }}
+            </p>
             <p><img :src="antagonist.imgUrl" :alt="antagonist.alt"></p>
           </th>
         </tr>
@@ -16,10 +18,10 @@
       <tbody>
         <!-- features -->
         <tr v-for="featureName in allFeaturesNames" :key="featureName">
-          <th>
+          <th class="feature-name">
             {{ featureName }}
           </th>
-          <td v-for="antagonist in antagonistList" :key="antagonist.slug">
+          <td v-for="antagonist in antagonistList" :key="antagonist.slug" class="feature-value">
             {{ antagonist.features[featureName] }}
           </td>
         </tr>
@@ -59,7 +61,11 @@ export default class AntagonistComparisonBase<TA extends AntagonistBase> extends
   margin-top: 3.0em;
 
   th img {
-    height: 50px;
+    max-height: 200px;
+  }
+
+  .feature-name {
+    white-space: nowrap;
   }
 }
 </style>
