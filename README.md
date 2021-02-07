@@ -1,7 +1,9 @@
 # nuxt-comparator
 
+This project is a template using NuxtJS to generate sites comparing any kind of items (the "antagonists").
+
 Deployed to https://nuxt-comparator.jordisan.net/
-Example at https://server-spa-comparison.jordisan.net/ (generated from 'example' branch)
+Example site at https://server-spa-comparison.jordisan.net/ (generated from 'example' branch)
 
 - Uses NextJS (static site generation) and Nuxt content
 - TypeScript
