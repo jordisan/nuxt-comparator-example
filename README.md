@@ -3,8 +3,9 @@
 Deployed to https://nuxt-comparator.jordisan.net/
 Example at https://server-spa-comparison.jordisan.net/
 
-- Uses NextJS (static site generation)
-- Full content available without JS (good for SEO)
+- Uses NextJS (static site generation) and Nuxt content
+- TypeScript
+- Content available without JS (good for SEO)
 
 ## Build Setup
 
@@ -31,6 +32,8 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - Some more tests
 - Responsive
 - Remove unnecessary folders/files
+- Custom error pages
+- Search
 
 ## References
 

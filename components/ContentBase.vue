@@ -5,7 +5,7 @@ import {
 } from 'nuxt-property-decorator'
 
 /**
- * Base class for content components
+ * Base class for content components (storage agnostic)
  */
 @Component
 export default class ContentBase extends Vue {
