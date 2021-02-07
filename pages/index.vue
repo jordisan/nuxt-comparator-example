@@ -7,6 +7,9 @@
       </h1>
       <p v-if="globalContent" class="description">
         {{ globalContent.description }}
+        <NuxtLink to="/about">
+          More ...
+        </NuxtLink>
       </p>
     </header>
     <AntagonistComparison :content-list="antagonistContentList" />
