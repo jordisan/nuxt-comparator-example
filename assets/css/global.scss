@@ -31,13 +31,17 @@ p {
     margin-bottom: 0.2em;
 }
 
-a, a * {
+a, a h3, a h4 {
     color: #00c58e;
     text-decoration: none;
 
     &:hover {
         color: #c58e00;
     }
+}
+
+img {
+    max-width: 100%;
 }
 
 time {
@@ -64,7 +68,12 @@ table.features {
     min-width: 50%;
 
     tbody th {
+        font-weight: bold;
         text-align: right;
+        position: sticky;
+        left: 0;
+        background-color: #fff;
+        z-index: 10;
     }
 
     th, td {

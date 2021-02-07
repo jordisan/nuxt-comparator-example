@@ -57,11 +57,20 @@ export default class AntagonistComparisonBase<TA extends AntagonistBase> extends
 </script>
 
 <style lang="scss">
+$bp-width: 768px;  // breakpoint width
+
 .antagonist-comparison {
   margin-top: 3.0em;
+  overflow-y: auto;
 
   th img {
     max-height: 200px;
+  }
+
+  th .description {
+    @media (max-width: $bp-width) {
+      display: none;
+    }
   }
 
   .feature-name {

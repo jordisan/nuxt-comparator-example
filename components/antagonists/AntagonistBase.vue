@@ -63,11 +63,13 @@ export default class AntagonistBase extends ContentBase {
 </script>
 
 <style lang="scss">
+$bp-width: 768px;  // breakpoint width
+
 .antagonist {
   &-header {
     text-align: center;
 
-    img {
+img {
       max-height: 300px;
     }
   }

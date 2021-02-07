@@ -8,7 +8,7 @@
       <p v-if="globalContent" class="description">
         {{ globalContent.description }}
         <NuxtLink to="/about">
-          More ...
+          More&nbsp;&hellip;
         </NuxtLink>
       </p>
     </header>
@@ -48,10 +48,16 @@ export default class Index extends PageBase {
 </script>
 
 <style lang="scss">
+$bp-width: 768px;  // breakpoint width
+
 .home {
   .logo {
     width: 200px;
     margin-top: 3.0rem;
+
+    @media (max-width: $bp-width) {
+      width: 100px;
+    }
   }
 
   .title-wrapper {
@@ -65,6 +71,10 @@ export default class Index extends PageBase {
       font-size: 70px;
       color: #35495e;
       letter-spacing: 1px;
+
+      @media (max-width: $bp-width) {
+        font-size: 40px;
+      }
     }
 
     .description {
@@ -76,7 +86,6 @@ export default class Index extends PageBase {
     text-align: center;
     margin-top: 3.0rem;
   }
-
 }
 
 </style>
