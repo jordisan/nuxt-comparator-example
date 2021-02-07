@@ -46,9 +46,13 @@ time {
 }
 
 .description {
-    margin: 1.0em 10%;
+    margin: .7em 10%;
     font-size: 115%;
     color: #62788e;
+}
+
+.created {
+    margin-top: -.5em;
 }
 
 table.features {
@@ -56,6 +60,8 @@ table.features {
 
     margin: 0 auto;
     border-collapse: collapse;
+    max-width: 90%;
+    min-width: 50%;
 
     tbody th {
         text-align: right;
@@ -67,5 +73,6 @@ table.features {
 
     td {
         border: solid 1px #00c58e;
+        min-width: 150px;
     }
 }

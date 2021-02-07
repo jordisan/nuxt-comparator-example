@@ -5,7 +5,9 @@
         <NuxtLink :to="'blog/' + blogEntry.slug">
           <h3>{{ blogEntry.title }}</h3>
         </NuxtLink>
-        <time>{{ blogEntry.createdAtFormatted }}</time>
+        <p class="created">
+          <time>{{ blogEntry.createdAtFormatted }}</time>
+        </p>
         <NuxtLink :to="'blog/' + blogEntry.slug">
           <p><img :src="blogEntry.imgUrl" :alt="blogEntry.alt"></p>
         </NuxtLink>

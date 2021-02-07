@@ -5,7 +5,9 @@
         <img :src="imgUrl" :alt="alt">
       </p>
       <h1>{{ title }}</h1>
-      <time>{{ createdAtFormatted }}</time>
+      <p class="created">
+        <time>{{ createdAtFormatted }}</time>
+      </p>
       <p class="description">
         {{ description }}
       </p>
