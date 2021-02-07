@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section v-if="globalContent" class="about">
     <header class="title-wrapper">
       <h1 class="title">
         About
@@ -8,7 +8,7 @@
         {{ globalContent.description }}
       </p>
     </header>
-    <nuxt-content v-if="globalContent" :document="globalContent" />
+    <nuxt-content :document="globalContent" />
   </section>
 </template>
 
@@ -17,12 +17,11 @@ import { Component } from 'nuxt-property-decorator'
 import ContentPageBase from './ContentPageBase.vue'
 
 /**
- * About page
+ * About page (shows info from global document)
  */
 @Component
 export default class About extends ContentPageBase {
-  public async fetch (): Promise<any> {
-    await this.getGlobalData()
+  public mounted (): void {
     this.pageTitle = 'About'
   }
 }
