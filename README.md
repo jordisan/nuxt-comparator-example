@@ -1,6 +1,10 @@
 # nuxt-comparator
 
 Deployed to https://nuxt-comparator.jordisan.net/
+Example at https://server-spa-comparison.jordisan.net/
+
+- Uses NextJS (static site generation)
+- Full content available without JS (good for SEO)
 
 ## Build Setup
 
