@@ -5,7 +5,7 @@ This project is a template using NuxtJS to generate sites comparing any kind of 
 Deployed to https://nuxt-comparator.jordisan.net/
 Example site at https://server-spa-comparison.jordisan.net/ (generated from 'example' branch)
 
-- Uses NextJS (static site generation) and Nuxt content
+- Uses NuxtJS (static site generation) and Nuxt content
 - TypeScript
 - All content based in .md files
 - Web content available without JS (good for SEO)
