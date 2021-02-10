@@ -1,6 +1,14 @@
 # nuxt-comparator
 
+This project is a template using NuxtJS to generate sites comparing any kind of items (the "antagonists").
+
 Deployed to https://nuxt-comparator.jordisan.net/
+Example site at https://server-spa-comparison.jordisan.net/ (generated from 'example' branch)
+
+- Uses NuxtJS (static site generation) and Nuxt content
+- TypeScript
+- All content based in .md files
+- Web content available without JS (good for SEO)
 
 ## Build Setup
 
@@ -23,13 +31,12 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## To do
 
-- Global settings: title, description, ...
-- Generic + sample site
-- Create components: antagonist (summary y/n), comparison, blog list, blog entry, ...
-- Store needed?
-- Some tests
+- Store needed? For global settings?
+- Some more tests
 - Responsive
 - Remove unnecessary folders/files
+- Custom error pages
+- Search
 
 ## References
 

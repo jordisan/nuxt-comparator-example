@@ -15,17 +15,23 @@ body {
 h1, h2, h3, h4, h5, th {
     // headers
     color: #35495e;
-    margin-top: 0.5em;
-    margin-bottom: 0.2em;
+    margin-top: 1.0em;
+    margin-bottom: 0.5em;
     font-weight: normal;
+    line-height: 1.1;
 }
+h1 { font-size: 2em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.8em; }
 
 p {
-    margin-top: 0.3em;
-    margin-bottom: 0.1em;
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
 }
 
-a, a * {
+a, a h3, a h4 {
     color: #00c58e;
     text-decoration: none;
 
@@ -34,9 +40,23 @@ a, a * {
     }
 }
 
+img {
+    max-width: 100%;
+}
+
 time {
     opacity: .5;
     font-size: 85%;
+}
+
+.description {
+    margin: .5em 10% .8em 10%;
+    font-size: 115%;
+    color: #62788e;
+}
+
+.created {
+    margin-top: -.5em;
 }
 
 table.features {
@@ -44,9 +64,16 @@ table.features {
 
     margin: 0 auto;
     border-collapse: collapse;
+    max-width: 90%;
+    min-width: 50%;
 
     tbody th {
+        font-weight: bold;
         text-align: right;
+        position: sticky;
+        left: 0;
+        background-color: #fff;
+        z-index: 10;
     }
 
     th, td {
@@ -55,5 +82,6 @@ table.features {
 
     td {
         border: solid 1px #00c58e;
+        min-width: 150px;
     }
 }

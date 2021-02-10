@@ -9,5 +9,6 @@
   margin-top: 5.0rem;
   text-align: center;
   opacity: .6;
+  font-size: 90%;
 }
 </style>

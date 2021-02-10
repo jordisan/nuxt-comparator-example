@@ -3,7 +3,9 @@
     <header class="antagonist-header">
       <h1>{{ title }}</h1>
 
-      <p>{{ description }}</p>
+      <p class="description">
+        {{ description }}
+      </p>
 
       <img :src="imgUrl" :alt="alt">
     </header>
@@ -25,6 +27,17 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section v-if="references" class="antagonist-references">
+      <h2>References</h2>
+      <ul>
+        <li v-for="url in references" :key="url">
+          <a :href="url" target="_blank">
+            {{ url }}
+          </a>
+        </li>
+      </ul>
     </section>
   </article>
 </template>
@@ -50,12 +63,14 @@ export default class AntagonistBase extends ContentBase {
 </script>
 
 <style lang="scss">
+$bp-width: 768px;  // breakpoint width
+
 .antagonist {
   &-header {
     text-align: center;
 
-    img {
-      height: 200px;
+img {
+      max-height: 300px;
     }
   }
 }
