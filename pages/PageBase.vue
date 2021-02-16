@@ -13,10 +13,18 @@ export default class PageBase extends Vue {
 
   public async getGlobalData () : Promise<void> {
     // read global content
-    this.globalContent = await this.$content('global').fetch() as IContentDocument
+    if (!this.globalContent) {
+      this.globalContent = await this.$content('global').fetch() as IContentDocument
+    }
   }
 
+  // get data on app load (or every page when JS disabled)
   public async fetch (): Promise<any> {
+    await this.getGlobalData()
+  }
+
+  // get data for every page
+  public async created (): Promise<any> {
     await this.getGlobalData()
   }
 
