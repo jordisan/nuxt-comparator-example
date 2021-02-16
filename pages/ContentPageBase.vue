@@ -11,14 +11,6 @@ export default class ContentPageBase extends PageBase {
   PATH: string = ''
   content: IContentDocument | null = null
 
-<<<<<<< HEAD
-  async fetch (): Promise<any> {
-    await this.getGlobalData()
-    // read the markdown file
-    this.content = await this.$content(this.PATH, this.$route.params.slug).fetch() as IContentDocument
-    this.pageTitle = this.content.title
-    this.pageDescription = this.content.description
-=======
   // get content
   public async getContent () : Promise<void> {
     // read the markdown file
@@ -39,7 +31,6 @@ export default class ContentPageBase extends PageBase {
   public async created (): Promise<any> {
     await this.getGlobalData()
     await this.getContent()
->>>>>>> template/main
   }
 }
 </script>
